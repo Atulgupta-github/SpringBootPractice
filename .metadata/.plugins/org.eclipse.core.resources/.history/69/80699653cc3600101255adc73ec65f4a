@@ -1,0 +1,8 @@
+package com.practice.export.scheduler;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class ExportScheduler {
+
+}

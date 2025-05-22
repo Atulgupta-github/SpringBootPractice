@@ -1,0 +1,24 @@
+package com.practice.export.executer;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.practice.export.sevice.UserInsertService;
+import com.practice.export.sevice.UserService;
+import com.practice.model.User;
+
+@Component
+public class ExportExecuter {
+	
+	@Autowired
+	private UserInsertService userSInsertService;
+	
+	
+	
+	public void processData() {
+		userSInsertService.inserUser();
+		
+		
+	}
+
+}

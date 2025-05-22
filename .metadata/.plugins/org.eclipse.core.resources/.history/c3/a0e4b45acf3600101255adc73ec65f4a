@@ -1,0 +1,12 @@
+package com.practice.export.sevice;
+
+import org.springframework.stereotype.Service;
+
+import com.practice.repository.UserRepository;
+
+@Service
+public class UserService {
+
+	
+	private UserRepository userRepo;
+}

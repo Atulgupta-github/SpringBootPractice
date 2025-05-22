@@ -1,0 +1,24 @@
+package com.practice.export.scheduler;
+
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.practice.export.executer.ExportExecuter;
+import com.practice.export.sevice.ExecuterService;
+
+@Component
+public class ExportScheduler {
+	
+	@Autowired
+	private ExportExecuter exportExecuter;
+	
+	private ScheduledExecutorService schedluer = Executors.newSingleThreadScheduledExecutor();
+	
+	Runnable  task = ()->{
+		exportExecuter.processData();
+	};
+
+}

@@ -1,0 +1,5 @@
+package com.practice.export.sevice;
+
+public class UserInsertService {
+
+}
