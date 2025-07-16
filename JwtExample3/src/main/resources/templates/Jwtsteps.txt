@@ -1,0 +1,24 @@
+1. make sure spring boot security is in pom.xml
+2. Create class JWTAuthenticationEntryPoint that implements AuthenticationEntryPoint
+
+Method of this class is called whenever as exception is thrown due to unAuthenticated user  
+trying to access the resoururce  that requied authentication
+
+3. Create class JWTHelper class : The class contains method related to perform operations with token 
+like generate token
+
+
+4. Create JwtAuthenticationFilter that extends OncePerRequestFilter and override the method and write 
+logic to check the token that is coming in header.
+A) GET token from request
+B) validate token
+c)GetUsername from token
+D) load user associated with token
+E) set authentication
+
+5. create SecurityConfigClass and implemet securityFilterChain method 
+
+6. Create class Jwt Request and Jwt Response for get the request and send the login access response
+
+
+
